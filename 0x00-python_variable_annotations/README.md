@@ -10,8 +10,8 @@ For this project, we expect you to look at this concept:
 
 Read or watch:
 
-<a href="https://docs.python.org/3/library/typing.html" target="_blank">Python 3 typing documentation</a>
-<a href="https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html" target="_blank">MyPy cheat sheet</a>
+- <a href="https://docs.python.org/3/library/typing.html" target="_blank">Python 3 typing documentation</a>
+- <a href="https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html" target="_blank">MyPy cheat sheet</a>
 
 ### Learning Objectives
 
