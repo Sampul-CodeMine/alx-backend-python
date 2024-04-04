@@ -47,9 +47,9 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 ### Required Files
 
-- <a href="" target="_blank">`utils.py`</a>
-- <a href="" target="_blank">`client.py`</a>
-- <a href="" target="_blank">`fixtures.py`</a>
+- <a href="https://github.com/Sampul-CodeMine/alx-backend-python/blob/main/0x03-Unittests_and_integration_tests/utils.py" target="_blank">`utils.py`</a>
+- <a href="https://github.com/Sampul-CodeMine/alx-backend-python/blob/main/0x03-Unittests_and_integration_tests/client.py" target="_blank">`client.py`</a>
+- <a href="https://github.com/Sampul-CodeMine/alx-backend-python/blob/main/0x03-Unittests_and_integration_tests/fixtures.py" target="_blank">`fixtures.py`</a>
 
 ---
 
