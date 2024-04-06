@@ -21,13 +21,5 @@ class TestAccessNestedMap(TestCase):
                                nested_map: dict,
                                path: Tuple[str],
                                expected: Union[Dict, int]) -> None:
-        """
-        This is a test method for the {access_nested_map} funtionality
-        Args:
-            nested_map (dict)
-            path (tuple of string)
-            expected (A union of {dict} and {int})
-        Returns:
-            None 
-        """
+        """This is a test method for the {access_nested_map} funtionality"""
         self.assertEqual(access_nested_map(nested_map, path), expected)
