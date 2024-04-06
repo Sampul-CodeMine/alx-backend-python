@@ -67,3 +67,11 @@ class TestGithubOrgClient(TestCase):
                              ['tester', 'user',],)
             obj.assert_called_once()
         get_json_mock.assert_called_once()
+
+    @parameterized.expand([
+        ({'license': {'key': "bsd-3-clause"}}, "bsd-3-clause", True),
+        ({'license': {'key': "bsl-1.0"}}, "bsd-3-clause", False),
+    ])
+    def test_has_license(self, repo: dict, key: str, expected: bool) -> None:
+        """This is a testmethod to tests the `has_license` method."""
+        self.assertEqual(GithubOrgClient.has_license(repo, key), expected)
