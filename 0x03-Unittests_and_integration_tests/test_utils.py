@@ -1,4 +1,4 @@
-#!/usr/bin.env python3
+#!/usr/bin/env python3
 """
 This is a Unittest Module to Test the utils.py functionalities
 """
