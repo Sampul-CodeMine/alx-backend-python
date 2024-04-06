@@ -55,3 +55,29 @@ class TestGetJson(TestCase):
             output = get_json(test_url)
             self.assertEqual(output, test_payload)
             response.json.assert_called_once()
+
+
+class TestMemoize(TestCase):
+    """
+    This is a class to test the {memoize} function
+    """
+    def test_memoize(self):
+        """memoize function"""
+
+        class TestClass:
+            """This is a Test Class"""
+            def a_method(self):
+                """This method when called always returns 42"""
+                return 42
+
+            @memoize
+            def a_property(self):
+                """Returns memoize property"""
+                return self.a_method()
+
+        with patch.object(TestClass, 'a_method', return_value=42) as obj:
+            test_cls = TestClass()
+            output = test_cls.a_property
+            output = test_cls.a_property
+            self.assertEqual(output, 42)
+            obj.assert_called_once()
