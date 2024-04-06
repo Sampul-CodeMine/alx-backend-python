@@ -11,7 +11,7 @@ from utils import (access_nested_map, get_json, memoize)
 
 
 class TestAccessNestedMap(TestCase):
-    """This is a class to test the access_nested_map function"""
+    """This is a class to test the {access_nested_map} function"""
     @parameterized.expand([
         ({"a": 1}, ("a",), 1),
         ({"a": {"b": 2}}, ("a",), {'b': 2}),
@@ -36,3 +36,22 @@ class TestAccessNestedMap(TestCase):
         with self.assertRaises(KeyError) as err:
             access_nested_map(nested_map, path)
             self.assertEqual(error, err.exception)
+
+
+class TestGetJson(TestCase):
+    """
+    This is a class to test the {get_json} function
+    Arguments are ordered in this format: test_url, test_payload
+    """
+    @parameterized.expand([
+        ('http://example.com', {'payload': True}),
+        ('http://holberton.io', {'payload': False})
+    ])
+    def test_get_json(self, test_url: str, test_payload: dict) -> None:
+        """This is a method to test the {get_json} functionalities"""
+        response = Mock()
+        response.json.return_value = test_payload
+        with patch('requests.get', return_value=response):
+            output = get_json(test_url)
+            self.assertEqual(output, test_payload)
+            response.json.assert_called_once()
