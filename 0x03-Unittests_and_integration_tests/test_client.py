@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """ This is a module to test Clients """
+import client
 from client import GithubOrgClient
 from fixtures import TEST_PAYLOAD
 import utils
