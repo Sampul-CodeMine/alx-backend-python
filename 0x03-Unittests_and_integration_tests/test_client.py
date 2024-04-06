@@ -25,7 +25,7 @@ class TestGithubOrgClient(TestCase):
             f"https://api.github.com/orgs/{org}"
         )
 
-    def test_public_repo_url(self) -> None:
+    def test_public_repos_url(self) -> None:
         """This method tests {public_repos_url} method"""
         result = "www.mamma.com"
         payload = {'repos_url': result}
